@@ -99,6 +99,7 @@ def detect(opt):
                 # Rescale boxes from img_size to im0 size
                 scale_coords(img.shape[2:], det[:, :4], im0.shape, kpt_label=False)
                 scale_coords(img.shape[2:], det[:, 6:], im0.shape, kpt_label=kpt_label, step=3)
+                
 
                 # Print results
                 for c in det[:, 5].unique():
@@ -107,12 +108,6 @@ def detect(opt):
 
                 # Write results
                 for det_index, (*xyxy, conf, cls) in enumerate(reversed(det[:,:6])):
-                    if save_txt:  # Write to file
-                        xywh = (xyxy2xywh(torch.tensor(xyxy).view(1, 4)) / gn).view(-1).tolist()  # normalized xywh
-                        line = (cls, *xywh, conf) if opt.save_conf else (cls, *xywh)  # label format
-                        with open(txt_path + '.txt', 'a') as f:
-                            f.write(('%g ' * len(line)).rstrip() % line + '\n')
-
                     if save_img or opt.save_crop or view_img:  # Add bbox to image
                         c = int(cls)  # integer class
                         label = None if opt.hide_labels else (names[c] if opt.hide_conf else f'{names[c]} {conf:.2f}')
@@ -120,6 +115,23 @@ def detect(opt):
                         plot_one_box(xyxy, im0, label=label, color=colors(c, True), line_thickness=opt.line_thickness, kpt_label=kpt_label, kpts=kpts, steps=3, orig_shape=im0.shape[:2])
                         if opt.save_crop:
                             save_one_box(xyxy, im0s, file=save_dir / 'crops' / names[c] / f'{p.stem}.jpg', BGR=True)
+                    
+                    
+                    
+                    if save_txt:  # Write to file
+                        #xywh = (xyxy2xywh(torch.tensor(xyxy).view(1, 4)) / gn).view(-1).tolist()  # normalized xywh
+                        #line = (cls, *xywh, conf) if opt.save_conf else (cls, *xywh)  # label format
+                        #with open(txt_path + '.txt', 'a') as f:
+                            #f.write(('%g ' * len(line)).rstrip() % line + '\n')
+                        cwd = os.getcwd()
+                        os.path.join("utils")
+                        f = open(os.path.join("key point coordinates"+".temp"),'r')
+                        coor = f.readline()
+                        os.chdir(cwd)#back to previous work dir
+                        with open(txt_path + '.txt', 'a') as f_txt:
+                            f_txt.write(coor)
+
+                    
 
 
                 if save_txt_tidl:  # Write to file in tidl dump format

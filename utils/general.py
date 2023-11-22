@@ -87,7 +87,7 @@ def check_git_status():
         cmd = 'git fetch && git config --get remote.origin.url'
         url = subprocess.check_output(cmd, shell=True).decode().strip().rstrip('.git')  # github repo url
         branch = subprocess.check_output('git rev-parse --abbrev-ref HEAD', shell=True).decode().strip()  # checked out
-        n = int(subprocess.check_output(f'git rev-list {branch}..origin/master --count', shell=True))  # commits behind
+        n = int(subprocess.check_output(f'git rev-list {branch} --count', shell=True))  # commits behind
         if n > 0:
             s = f"⚠️ WARNING: code is out of date by {n} commit{'s' * (n > 1)}. " \
                 f"Use 'git pull' to update or 'git clone {url}' to download latest."
@@ -483,7 +483,7 @@ def wh_iou(wh1, wh2):
 
 
 def non_max_suppression(prediction, conf_thres=0.03, iou_thres=0.30, classes=None, agnostic=False, multi_label=False,
-                        labels=(), kpt_label=False, nc=None, nkpt=None):
+                        labels=(), kpt_label=False, nc=None, nkpt=4):
 
     """Runs Non-Maximum Suppression (NMS) on inference results
 

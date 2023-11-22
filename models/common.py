@@ -3,7 +3,7 @@
 import math
 from copy import copy
 from pathlib import Path
-
+import warnings
 import numpy as np
 import pandas as pd
 import requests
@@ -155,6 +155,21 @@ class BottleneckCSP(nn.Module):
         y2 = self.cv2(x)
         return self.cv4(self.act(self.bn(torch.cat((y1, y2), dim=1))))
 
+class SPPF(nn.Module):
+    def __init__(self, c1, c2, k=5):
+        super().__init__()
+        c_ = c1 // 2
+        self.cv1 = Conv(c1, c_, 1, 1)
+        self.cv2 = Conv(c_ * 4, c2, 1, 1)
+        self.m = nn.MaxPool2d(kernel_size=k, stride=1, padding=k // 2)
+
+    def forward(self, x):
+        x = self.cv1(x)
+        with warnings.catch_warnings():
+            warnings.simplefilter('ignore')
+            y1 = self.m(x)
+            y2 = self.m(y1)
+            return self.cv2(torch.cat([x, y1, y2, self.m(y2)], 1))
 
 class BottleneckCSPF(nn.Module):
     # CSP Bottleneck https://github.com/WongKinYiu/CrossStagePartialNetworks

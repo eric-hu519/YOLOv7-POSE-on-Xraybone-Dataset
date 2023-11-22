@@ -1,0 +1,142 @@
+{
+    "os": "Linux-5.15.0-89-generic-x86_64-with-glibc2.10",
+    "python": "3.8.16",
+    "heartbeatAt": "2023-11-22T12:28:16.862571",
+    "startedAt": "2023-11-22T12:28:15.222108",
+    "docker": null,
+    "cuda": null,
+    "args": [
+        "--data",
+        "data/custom_kpts.yaml",
+        "--cfg",
+        "cfg/yolov7-w6-pose_custom.yaml",
+        "--hyp",
+        "data/hyp.pose.yaml",
+        "--device",
+        "0",
+        "--kpt-label",
+        "--epochs",
+        "150",
+        "--batch-size",
+        "8"
+    ],
+    "state": "running",
+    "program": "train.py",
+    "codePathLocal": "train.py",
+    "codePath": "train.py",
+    "git": {
+        "remote": "git@github.com:eric-hu519/YOLOv7-POSE-on-Xraybone-Dataset.git",
+        "commit": "3c53bca92075ae7224d98b2a8b881544a3a7bada"
+    },
+    "email": "huzhongyu519@outlook.com",
+    "root": "/home/erichu/Documents/YOLOv7-POSE-on-Xraybone-Dataset",
+    "host": "erichu-MS-7C94",
+    "username": "erichu",
+    "executable": "/home/erichu/miniconda3/envs/xraybone/bin/python",
+    "cpu_count": 8,
+    "cpu_count_logical": 16,
+    "cpu_freq": {
+        "current": 2901.8289999999997,
+        "min": 2200.0,
+        "max": 3800.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 3429.264,
+            "min": 2200.0,
+            "max": 3800.0
+        },
+        {
+            "current": 2200.0,
+            "min": 2200.0,
+            "max": 3800.0
+        },
+        {
+            "current": 2800.0,
+            "min": 2200.0,
+            "max": 3800.0
+        },
+        {
+            "current": 2200.0,
+            "min": 2200.0,
+            "max": 3800.0
+        },
+        {
+            "current": 2800.0,
+            "min": 2200.0,
+            "max": 3800.0
+        },
+        {
+            "current": 2200.0,
+            "min": 2200.0,
+            "max": 3800.0
+        },
+        {
+            "current": 3800.0,
+            "min": 2200.0,
+            "max": 3800.0
+        },
+        {
+            "current": 2800.0,
+            "min": 2200.0,
+            "max": 3800.0
+        },
+        {
+            "current": 2200.0,
+            "min": 2200.0,
+            "max": 3800.0
+        },
+        {
+            "current": 2800.0,
+            "min": 2200.0,
+            "max": 3800.0
+        },
+        {
+            "current": 3800.0,
+            "min": 2200.0,
+            "max": 3800.0
+        },
+        {
+            "current": 2800.0,
+            "min": 2200.0,
+            "max": 3800.0
+        },
+        {
+            "current": 2200.0,
+            "min": 2200.0,
+            "max": 3800.0
+        },
+        {
+            "current": 2800.0,
+            "min": 2200.0,
+            "max": 3800.0
+        },
+        {
+            "current": 3800.0,
+            "min": 2200.0,
+            "max": 3800.0
+        },
+        {
+            "current": 3800.0,
+            "min": 2200.0,
+            "max": 3800.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 109.44348526000977,
+            "used": 26.669845581054688
+        }
+    },
+    "gpu": "NVIDIA GeForce RTX 3080",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce RTX 3080",
+            "memory_total": 10737418240
+        }
+    ],
+    "memory": {
+        "total": 31.26232147216797
+    }
+}
