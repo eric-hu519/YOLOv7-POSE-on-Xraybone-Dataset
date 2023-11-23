@@ -83,11 +83,12 @@ class my_converter:
 
                     anno_count = 0#reset count
 
-        final_annotations = list(final_annotations.values())
-        data['annotations'] = final_annotations
-        data['categories'] = list(final_category.values())
-        with open(os.path.join(self.ana_txt_save_path,self.save_type+"_converted"".json"),'w') as f:
-            json.dump(data,f)
+        if not self.save_txt_flag:
+            final_annotations = list(final_annotations.values())
+            data['annotations'] = final_annotations
+            data['categories'] = list(final_category.values())
+            with open(os.path.join(self.ana_txt_save_path,self.save_type+"_converted"".json"),'w') as f:
+                json.dump(data,f)
                     
         if self.display_flag:
             self.annocheck(data)
