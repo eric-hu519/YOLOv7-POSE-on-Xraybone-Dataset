@@ -4,3 +4,5 @@ runs/*
 final_dataset/labels/*
 coco_converter/convert_results/*
 *.jpg
+*.jpeg
+*.png
