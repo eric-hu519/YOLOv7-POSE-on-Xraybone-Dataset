@@ -170,7 +170,7 @@ class my_converter:
         lables = bbox + keypoints
 
         f_txt = open(os.path.join(self.ana_txt_save_path, str(img_id) + ".txt"), 'w')
-        f_txt.write('0 ' + ' '.join(str(label) for label in lables).replace('[','').replace(']',''))
+        f_txt.write('0 ' + ' '.join(str(label) for label in lables).replace('[','').replace(']','').replace(',',''))
         f_txt.close()
 
         annotations = []  # reset

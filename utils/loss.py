@@ -84,7 +84,7 @@ class QFocalLoss(nn.Module):
             return loss
 
 
-class ComputeLoss:
+class  ComputeLoss:
     # Compute losses
     def __init__(self, model, autobalance=False, kpt_label=False):
         super(ComputeLoss, self).__init__()
