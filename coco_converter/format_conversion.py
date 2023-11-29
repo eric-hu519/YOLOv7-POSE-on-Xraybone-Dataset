@@ -9,7 +9,7 @@ import json
 from tqdm import tqdm
 
 class my_converter:
-    def __init__(self,file_path,save_type,ana_txt_save_path,img_folder,rename_flag,display_flag = False,save_txt_flag = True):
+    def __init__(self,file_path,save_type,ana_txt_save_path,img_folder,rename_flag,display_flag = True,save_txt_flag = True):
         self.file_path = file_path
         self.save_type = save_type
         self.ana_txt_save_path = ana_txt_save_path

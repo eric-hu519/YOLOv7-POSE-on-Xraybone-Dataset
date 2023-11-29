@@ -1,6 +1,5 @@
 *.pt
-runs/*
-*__pycache__*
+runs/train/*
 final_dataset/labels/*
 coco_converter/convert_results/*
 *.jpg

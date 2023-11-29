@@ -2532,3 +2532,108 @@ Starting training for 250 epochs...
 
 
    239/249     6.45G   0.01848  0.004683         0   0.09139  0.001605    0.1162         4       640: 100%|█| 100/100 [00:13<00:00,  7.41it/s]
+               Class      Images      Labels           P           R      mAP@.5  mAP@.5:.95: 100%|█████████████| 7/7 [00:00<00:00,  9.86it/s]
+                 all         100         100           1        0.98       0.995       0.661
+     Epoch   gpu_mem       box       obj       cls       kpt      kptv     total    labels  img_size
+
+
+
+
+
+
+   240/249     6.45G   0.01825  0.004819         0   0.09311  0.001514    0.1177         8       640:  99%|█▉| 99/100 [00:13<00:00,  7.28it/s]
+   240/249     6.45G   0.01821  0.004817         0   0.09322  0.001529    0.1178         4       640: 100%|█| 100/100 [00:13<00:00,  7.41it/s]
+               Class      Images      Labels           P           R      mAP@.5  mAP@.5:.95: 100%|█████████████| 7/7 [00:00<00:00,  9.92it/s]
+     Epoch   gpu_mem       box       obj       cls       kpt      kptv     total    labels  img_size
+
+
+
+
+
+
+   241/249     6.45G   0.01834  0.004745         0   0.09415  0.001384    0.1186         4       640: 100%|█| 100/100 [00:13<00:00,  7.39it/s]
+               Class      Images      Labels           P           R      mAP@.5  mAP@.5:.95: 100%|█████████████| 7/7 [00:00<00:00,  9.79it/s]
+                 all         100         100           1        0.98       0.995       0.661
+     Epoch   gpu_mem       box       obj       cls       kpt      kptv     total    labels  img_size
+
+
+
+
+
+
+   242/249     6.45G   0.01864  0.004723         0   0.09141  0.001509    0.1163         8       640:  94%|█▉| 94/100 [00:12<00:00,  7.44it/s]
+   242/249     6.45G   0.01875  0.004745         0   0.09322  0.001495    0.1182         4       640: 100%|█| 100/100 [00:13<00:00,  7.36it/s]
+               Class      Images      Labels           P           R      mAP@.5  mAP@.5:.95: 100%|█████████████| 7/7 [00:00<00:00,  9.90it/s]
+     Epoch   gpu_mem       box       obj       cls       kpt      kptv     total    labels  img_size
+
+
+
+
+
+   243/249     6.45G   0.01853  0.004771         0   0.09563  0.001449    0.1204         4       640: 100%|█| 100/100 [00:13<00:00,  7.27it/s]
+               Class      Images      Labels           P           R      mAP@.5  mAP@.5:.95:   0%|                     | 0/7 [00:00<?, ?it/s]
+               Class      Images      Labels           P           R      mAP@.5  mAP@.5:.95: 100%|█████████████| 7/7 [00:00<00:00,  9.46it/s]
+     Epoch   gpu_mem       box       obj       cls       kpt      kptv     total    labels  img_size
+
+
+
+
+
+
+   244/249     6.45G   0.01875   0.00477         0   0.08978  0.001513    0.1148         4       640: 100%|█| 100/100 [00:13<00:00,  7.25it/s]
+               Class      Images      Labels           P           R      mAP@.5  mAP@.5:.95: 100%|█████████████| 7/7 [00:00<00:00,  9.83it/s]
+                 all         100         100           1        0.98       0.995        0.66
+     Epoch   gpu_mem       box       obj       cls       kpt      kptv     total    labels  img_size
+
+
+
+
+
+
+   245/249     6.45G   0.01855  0.004732         0   0.09154   0.00153    0.1163         8       640:  94%|█▉| 94/100 [00:13<00:00,  7.27it/s]
+   245/249     6.45G   0.01858  0.004738         0   0.09315  0.001562     0.118         4       640: 100%|█| 100/100 [00:13<00:00,  7.26it/s]
+               Class      Images      Labels           P           R      mAP@.5  mAP@.5:.95: 100%|█████████████| 7/7 [00:00<00:00,  9.69it/s]
+     Epoch   gpu_mem       box       obj       cls       kpt      kptv     total    labels  img_size
+
+
+
+
+
+   246/249     6.45G   0.01849  0.004821         0    0.0919  0.001572    0.1168         4       640: 100%|█| 100/100 [00:13<00:00,  7.26it/s]
+               Class      Images      Labels           P           R      mAP@.5  mAP@.5:.95:   0%|                     | 0/7 [00:00<?, ?it/s]
+               Class      Images      Labels           P           R      mAP@.5  mAP@.5:.95: 100%|█████████████| 7/7 [00:00<00:00,  9.79it/s]
+     Epoch   gpu_mem       box       obj       cls       kpt      kptv     total    labels  img_size
+
+
+
+
+
+
+   247/249     6.45G   0.01888  0.004802         0   0.09161  0.001501    0.1168         4       640: 100%|█| 100/100 [00:13<00:00,  7.40it/s]
+               Class      Images      Labels           P           R      mAP@.5  mAP@.5:.95: 100%|█████████████| 7/7 [00:00<00:00,  9.92it/s]
+                 all         100         100           1        0.98       0.995       0.666
+     Epoch   gpu_mem       box       obj       cls       kpt      kptv     total    labels  img_size
+
+
+
+
+
+   248/249     6.45G   0.01841  0.004737         0   0.08699  0.001503    0.1116         4       640: 100%|█| 100/100 [00:13<00:00,  7.40it/s]
+               Class      Images      Labels           P           R      mAP@.5  mAP@.5:.95:   0%|                     | 0/7 [00:00<?, ?it/s]
+               Class      Images      Labels           P           R      mAP@.5  mAP@.5:.95: 100%|█████████████| 7/7 [00:00<00:00,  9.74it/s]
+     Epoch   gpu_mem       box       obj       cls       kpt      kptv     total    labels  img_size
+
+
+
+
+
+
+   249/249     6.45G   0.01848  0.004767         0   0.09072  0.001475    0.1154         4       640: 100%|█| 100/100 [00:13<00:00,  7.17it/s]
+
+               Class      Images      Labels           P           R      mAP@.5  mAP@.5:.95:  57%|███████▍     | 4/7 [00:02<00:01,  2.22it/s]
+
+               Class      Images      Labels           P           R      mAP@.5  mAP@.5:.95: 100%|█████████████| 7/7 [00:02<00:00,  2.34it/s]
+250 epochs completed in 1.086 hours.
+Optimizer stripped from runs/train/exp21/weights/last.pt, 160.6MB
+Optimizer stripped from runs/train/exp21/weights/best.pt, 160.6MB
+Images sizes do not match. This will causes images to be display incorrectly in the UI.

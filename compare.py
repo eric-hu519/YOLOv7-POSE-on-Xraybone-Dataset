@@ -7,7 +7,7 @@ cwd = os.getcwd()
 
 c_net_path = os.path.join("records")
 
-yolo_path = os.path.join("runs","detect","exp14","labels")
+yolo_path = os.path.join("runs","detect","exp17","labels")
 
 test_json = os.path.join("coco_converter","annotations","xRayBone_test.json")
 lables = os.path.join("final_dataset","labels","test")
