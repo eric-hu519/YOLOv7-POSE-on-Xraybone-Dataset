@@ -118,7 +118,9 @@ def get_img():
         c_net_result_list.append(c_net_results)
     labels_result_list = get_anno(test_json)
     c_net_dist,yolo_net_dist = get_Eular_dist(labels_result_list,c_net_result_list,yolo_result_list)
+    print("yolo Result: \n")
     get_class_dist(A_test,s1_test,f1_test,f2_test,A_list,s1_list,fh1_list,fh2_list)
+    get_class_dist(A_test,s1_test,f1_test,f2_test,CA_list,Cs1_list,Cfh1_list,Cfh2_list)
     visulization(yolo_net_dist,c_net_dist)
     
 A_list = []
@@ -157,23 +159,40 @@ def get_lable_result(img_id):
         lables_result = A+s1+fh1+fh2
         return lables_result
 
+CA_list = []
+Cs1_list = []
+Cfh1_list = []
+Cfh2_list = []
 def get_c_net_result(test_file_name,img_width,img_height):
         c_net_record = os.path.join(c_net_path,test_file_name+".json")#open the corrspopnding results
         c_net_data = json.load(open(c_net_record,'r'))
         value_1 = c_net_data['1']
         value_2 = c_net_data['2']
         value_3 = c_net_data['3']
-        A = value_1[-2:]
-        s1 = bbox_converter(value_1[:4])
-        fh1 = bbox_converter(value_2[:4])
-        fh2 = bbox_converter(value_3[:4])
+        A = (value_1[-2:])
+        s1 = Cbbox_converter(value_1[:4])
+        fh1 = Cbbox_converter(value_2[:4])
+        fh2 = Cbbox_converter(value_3[:4])
         #A = val_norm(A,img_width,img_height)
         #s1 = val_norm(s1,img_width,img_height)
         #fh1 = val_norm(fh1,img_width,img_height)
         #fh2 = val_norm(fh2,img_width,img_height)
+        CA_list.append(A)
+        Cs1_list.append(s1)
+        Cfh1_list.append(fh1)
+        Cfh2_list.append(fh2)
         c_net_result=A+s1+fh1+fh2
         return c_net_result
 
+def Cbbox_converter(bbox):
+        x_min, y_min, bb_width, bb_height = bbox
+        x_max = x_min + bb_width
+        y_max = y_min + bb_height
+        # compute center coordinates
+        center_x = ( x_max) / 2
+        center_y = (y_max) / 2
+        bbox_center = [center_x, center_y]
+        return bbox_center
 
 def bbox_converter(bbox):
         x_min, y_min, bb_width, bb_height = bbox
